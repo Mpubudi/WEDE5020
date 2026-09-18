@@ -1,3 +1,110 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap");
-:root{--green:#2e7d32;--amber:#f59e0b;--offwhite:#f9fafb;--slate:#1f2937}
-*{box-sizing:border-box}body{margin:0;font-family:Roboto,Arial,sans-serif;background:var(--offwhite);color:var(--slate);line-height:1.65}.eco-header{position:sticky;top:0;background:#fff;box-shadow:0 2px 12px #00000012;z-index:10}.eco-nav{max-width:1150px;margin:auto;min-height:74px;display:flex;align-items:center;justify-content:space-between;padding:12px 24px;gap:25px}.eco-logo{font-family:Montserrat,sans-serif;font-size:1.15rem;font-weight:800;color:var(--green);text-decoration:none;white-space:nowrap}.eco-nav nav{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.eco-nav nav a{color:var(--slate);text-decoration:none;padding:9px 11px;font-weight:500}.eco-nav nav a:hover,.eco-nav nav a.active{color:var(--green)}.eco-nav .donate{background:var(--amber);color:#fff!important;border-radius:6px}.eco-hero{min-height:520px;display:grid;place-items:center;padding:80px 24px;background:linear-gradient(100deg,#1b5e20e8,#2e7d32b3),url("../img/hero-bg.jpg") center/cover}.eco-hero>div{max-width:800px;color:#fff;text-align:center}.eco-hero h1,.eco-page h1{font:800 clamp(2.2rem,6vw,4.5rem)/1.12 Montserrat,sans-serif;margin:12px 0}.eco-hero p{font-size:1.1rem}.eyebrow{letter-spacing:2px;font-weight:700;color:var(--amber);font-size:.85rem}.eco-hero .eyebrow{color:#ffe0a0}.hero-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:28px}.hero-buttons a,.donate-section a,button{background:var(--amber);color:#fff;border:0;border-radius:6px;padding:13px 22px;text-decoration:none;font-weight:700;cursor:pointer}.hero-buttons .secondary{background:transparent;border:2px solid #fff}.eco-section{max-width:1100px;margin:auto;padding:70px 24px}.eco-section h2{font:800 2rem Montserrat,sans-serif;color:var(--green)}.eco-cards,.two-col,.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.two-col{grid-template-columns:repeat(2,1fr)}article,.two-col>div,.form-section{background:#fff;border-radius:12px;padding:26px;box-shadow:0 4px 18px #0000000d}article h3{color:var(--green);font-family:Montserrat}.impact{background:#edf7ed;max-width:none;text-align:center}.stats{max-width:900px;margin:25px auto 0}.stats div{display:flex;flex-direction:column}.stats strong{font:800 2rem Montserrat;color:var(--green)}.stats span{font-size:.95rem}.donate-section{text-align:center;background:var(--green);color:#fff;max-width:none}.donate-section h2{color:#fff}.donate-section a{display:inline-block;background:var(--amber)}.eco-page{min-height:70vh}.eco-page h1{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--green)}form{display:grid;gap:14px}input,textarea{width:100%;padding:13px;border:1px solid #d1d5db;border-radius:6px;font:inherit}textarea{min-height:130px}.map-placeholder{background:#e5e7eb;min-height:230px;display:grid;place-items:center;text-align:center;border-radius:10px;color:#4b5563}.eco-footer{background:#17231a;color:#d1d5db;text-align:center;padding:35px 20px}.eco-footer strong{color:#fff;font:700 1.2rem Montserrat}@media(max-width:760px){.eco-nav{flex-direction:column;align-items:flex-start}.eco-nav nav{width:100%;gap:0}.eco-nav nav a{padding:7px}.eco-cards,.stats,.two-col{grid-template-columns:1fr}.eco-hero{min-height:600px}}
+/* EcoReach Youth Foundation - Part 2 external stylesheet */
+:root {
+  --green-900: #174d24;
+  --green-700: #2e7d32;
+  --green-500: #4caf50;
+  --green-050: #edf7ed;
+  --gold: #f59e0b;
+  --ink: #1f2937;
+  --muted: #5b6470;
+  --white: #ffffff;
+  --surface: #f7faf7;
+  --border: #d7ded8;
+  --shadow: 0 8px 24px rgba(23, 77, 36, 0.10);
+  --radius: 14px;
+  --content: 1120px;
+}
+
+/* CSS reset */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--surface); line-height: 1.65; }
+img { display: block; max-width: 100%; height: auto; }
+button, input, select, textarea { font: inherit; }
+a { color: inherit; }
+
+.skip-link { position: absolute; left: -9999px; top: 1rem; z-index: 1000; padding: .75rem 1rem; background: var(--green-900); color: var(--white); }
+.skip-link:focus { left: 1rem; }
+
+.eco-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--border); box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+.eco-nav { width: min(100% - 2rem, var(--content)); min-height: 74px; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.eco-logo { display: inline-flex; align-items: center; gap: .55rem; color: var(--green-700); text-decoration: none; font-size: 1.1rem; font-weight: 800; letter-spacing: .01em; }
+.eco-logo img { width: 42px; height: 42px; object-fit: contain; }
+.nav-toggle { display: none; border: 1px solid var(--border); background: var(--white); color: var(--green-900); border-radius: 8px; padding: .55rem .75rem; cursor: pointer; }
+.eco-nav nav { display: flex; align-items: center; gap: .25rem; }
+.eco-nav nav a { text-decoration: none; padding: .65rem .75rem; border-radius: 8px; font-weight: 600; }
+.eco-nav nav a:hover, .eco-nav nav a:focus-visible { background: var(--green-050); color: var(--green-700); outline: none; }
+.eco-nav nav a.active { color: var(--green-700); background: var(--green-050); }
+.eco-nav nav a.donate { background: var(--gold); color: var(--white); }
+.eco-nav nav a.donate:hover, .eco-nav nav a.donate:focus-visible { background: #d97706; color: var(--white); }
+
+.eco-hero { min-height: clamp(500px, 70vh, 680px); display: grid; place-items: center; padding: clamp(3rem, 8vw, 6rem) 1rem; background: linear-gradient(100deg, rgba(23,77,36,.94), rgba(46,125,50,.70)), url('../img/hero-bg.jpg') center/cover no-repeat; }
+.eco-hero > div { width: min(100%, 820px); color: var(--white); text-align: center; }
+.eco-hero h1, .eco-page h1 { margin: .5rem 0 1rem; font-weight: 800; line-height: 1.12; letter-spacing: -.02em; }
+.eco-hero h1 { font-size: clamp(2.25rem, 6vw, 4.5rem); }
+.eco-page h1 { font-size: clamp(2.2rem, 5vw, 3.7rem); color: var(--green-900); }
+.eco-hero p:not(.eyebrow) { max-width: 700px; margin-inline: auto; font-size: clamp(1rem, 2vw, 1.15rem); }
+.eyebrow { margin: 0; color: var(--gold); font-size: .82rem; font-weight: 800; letter-spacing: .14em; }
+.eco-hero .eyebrow { color: #ffe2a8; }
+.hero-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: .85rem; margin-top: 1.75rem; }
+.button, button { display: inline-block; border: 0; border-radius: 8px; padding: .8rem 1.2rem; background: var(--gold); color: var(--white); text-decoration: none; font-weight: 800; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+.button:hover, button:hover { transform: translateY(-2px); box-shadow: var(--shadow); background: #d97706; }
+.button:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid rgba(245,158,11,.45); outline-offset: 2px; }
+.hero-buttons .secondary { background: transparent; border: 2px solid var(--white); }
+.hero-buttons .secondary:hover { background: var(--white); color: var(--green-900); }
+
+.eco-page { min-height: 70vh; }
+.eco-section { width: min(100% - 2rem, var(--content)); margin-inline: auto; padding-block: clamp(3rem, 7vw, 5rem); }
+.eco-section h2 { margin-top: 0; color: var(--green-700); font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.2; }
+.eco-section h3 { margin-top: 0; color: var(--green-700); font-size: 1.2rem; }
+.eco-section p { max-width: 75ch; }
+.eco-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 1.5rem); }
+.card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: clamp(1.25rem, 3vw, 1.75rem); box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(23,77,36,.15); }
+.card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
+.two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 4vw, 2rem); }
+.two-col > div, .form-section { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: clamp(1.25rem, 3vw, 2rem); box-shadow: var(--shadow); }
+.impact { width: 100%; max-width: none; background: var(--green-050); text-align: center; }
+.stats { width: min(100%, 900px); margin: 1.5rem auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.stats div { padding: 1rem; }
+.stats strong { display: block; color: var(--green-700); font-size: clamp(1.7rem, 4vw, 2.3rem); }
+.stats span { color: var(--muted); font-size: .95rem; }
+.donate-section { width: 100%; max-width: none; background: var(--green-700); color: var(--white); text-align: center; }
+.donate-section h2 { color: var(--white); }
+.donate-section p { margin-inline: auto; }
+
+.form-section form { display: grid; gap: .9rem; }
+.form-group { display: grid; gap: .35rem; }
+.form-group label { font-weight: 700; }
+input, select, textarea { width: 100%; padding: .78rem .85rem; border: 1px solid #c8d1ca; border-radius: 8px; background: var(--white); color: var(--ink); }
+textarea { min-height: 140px; resize: vertical; }
+.map-placeholder { min-height: 230px; display: grid; place-items: center; padding: 1.5rem; text-align: center; border: 1px dashed #aab6ad; border-radius: 10px; background: #eef2ee; color: var(--muted); }
+.notice { padding: 1rem 1.1rem; border-left: 4px solid var(--gold); background: #fff8e8; border-radius: 6px; }
+
+.eco-footer { background: #17231a; color: #d8e1da; text-align: center; padding: 2.5rem 1rem; }
+.eco-footer strong { color: var(--white); font-size: 1.2rem; }
+.eco-footer a { color: #e9f7eb; }
+
+@media (max-width: 900px) {
+  .eco-nav { min-height: 68px; }
+  .nav-toggle { display: inline-block; }
+  .eco-nav nav { display: none; width: 100%; flex-direction: column; align-items: stretch; padding-bottom: .75rem; }
+  .eco-nav nav.open { display: flex; }
+  .eco-nav { flex-wrap: wrap; }
+  .eco-nav nav a { width: 100%; }
+  .eco-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .eco-nav { width: min(100% - 1rem, var(--content)); }
+  .eco-section { width: min(100% - 1.25rem, var(--content)); padding-block: 2.75rem; }
+  .eco-hero { min-height: 560px; }
+  .eco-cards, .two-col, .stats { grid-template-columns: 1fr; }
+  .hero-buttons { align-items: stretch; flex-direction: column; width: min(100%, 320px); margin-inline: auto; }
+  .hero-buttons .button { text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
