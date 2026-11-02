@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /submit.php
+
+# Replace the placeholder domain after publishing the website.
+Sitemap: https://YOUR-PUBLISHED-DOMAIN/sitemap.xml
