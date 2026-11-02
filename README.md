@@ -120,3 +120,41 @@ The screenshots should show that navigation, cards, forms, text and images resiz
 - [ ] Commit Part 2 changes with descriptive Git messages
 - [ ] Push the final project to the GitHub remote repository
 - [ ] Submit the GitHub repository link on the LMS
+---
+
+## 10. Part 3 — Enhancing Functionality and SEO
+
+Part 3 builds on the EcoReach Youth Foundation website developed in Part 2. The aim is to improve website functionality, user interaction and search engine optimisation (SEO).
+
+### Part 3 Enhancements
+- Added an enquiry page (`enquiry.html`).
+- Added a PHP processing file (`submit.php`) for handling enquiry submissions.
+- Added `robots.txt` to provide search engine crawling instructions.
+- Added `sitemap.xml` to help search engines discover website pages.
+- Updated the website JavaScript and CSS files.
+- Retained the responsive design and existing website pages.
+
+### Part 3 Technologies
+- HTML5
+- CSS3
+- JavaScript
+- PHP
+- SEO files (`robots.txt` and `sitemap.xml`)
+
+### Part 3 Changelog
+- Added the enquiry page.
+- Added the PHP enquiry-processing file.
+- Added SEO-related files.
+- Updated website CSS and JavaScript assets.
+- Continued using descriptive Git commit messages to record project changes.
+
+### Part 3 Testing Checklist
+- [ ] Test the enquiry form in a browser.
+- [ ] Check form validation.
+- [ ] Test PHP form processing on a PHP-enabled hosting service.
+- [ ] Check website navigation and links.
+- [ ] Check responsive layout on desktop and mobile.
+- [ ] Confirm that `robots.txt` and `sitemap.xml` are accessible online.
+
+### Final Submission
+The `part-3-final` branch contains the Part 3 website updates for the WEDES020 POE assessment. Testing should be completed before the website is considered fully functional.
